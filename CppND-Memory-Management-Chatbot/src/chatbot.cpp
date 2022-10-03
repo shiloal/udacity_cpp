@@ -42,12 +42,8 @@ ChatBot::~ChatBot()
     }
 }
 
-//// STUDENT CODE
-////
 ChatBot::ChatBot(const ChatBot &source) 			// Copy constructor
 {
-  // invalidate data handles
-  
   _currentNode = source._currentNode;
   _rootNode = source._rootNode;
   _image = new wxBitmap();
@@ -111,8 +107,6 @@ ChatBot &ChatBot::operator=(ChatBot &&source)		// Moving assignment
   std::cout << "ChatBot MOVING (assign) instance " << &source << " to instance " << this << std::endl;
   return *this;
 }
-////
-//// EOF STUDENT CODE
 
 void ChatBot::ReceiveMessageFromUser(std::string message)
 {
